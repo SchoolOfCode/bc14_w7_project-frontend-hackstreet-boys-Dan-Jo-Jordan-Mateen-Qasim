@@ -6,11 +6,18 @@ import StepButton from '@mui/material/StepButton';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-const steps = ['Select campaign settings', 'Create an ad group', 'Create an ad'];
+const steps = ['Week 1', 'Week 2', 'Week 3', 'Week 4'];
 
 export default function HorizontalNonLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [completed, setCompleted] = React.useState({});
+
+/*
+- The typography component is responsible for displaying text on each node
+- We suspect that we may need another useState for week description and any other week
+identification, the same way they have, picking from an array.
+
+*/
 
   const totalSteps = () => {
     return steps.length;
@@ -83,7 +90,7 @@ export default function HorizontalNonLinearStepper() {
         ) : (
           <React.Fragment>
             <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
-              Step {activeStep + 1}
+              Hello! {activeStep + 1}
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
               <Button

@@ -5,10 +5,11 @@ import Step from '@mui/material/Step';
 import StepButton from '@mui/material/StepButton';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import CollapsibleTable from "../dropdown";
 
 const steps = ['Week 1', 'Week 2', 'Week 3', 'Week 4'];
 
-export default function HorizontalNonLinearStepper() {
+export default function Timeline() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [completed, setCompleted] = React.useState({});
 
@@ -90,7 +91,7 @@ identification, the same way they have, picking from an array.
         ) : (
           <React.Fragment>
             <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
-              Hello! {activeStep + 1}
+              Hello
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
               <Button

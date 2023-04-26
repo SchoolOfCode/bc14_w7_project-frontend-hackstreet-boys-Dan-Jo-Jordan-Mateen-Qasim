@@ -116,19 +116,21 @@ Row.propTypes = {
 //function which passes data to rows array below
 function createData(
     day,
+    topicsCovered,
     description,
    externalResources,
     lectureRecording,
     classroomLink,
-    topicsCovered 
+    
 ) {
     return {
-        day,
+    day,
+    topicsCovered,
     description,
    externalResources,
     lectureRecording,
     classroomLink,
-    topicsCovered,
+    
     };
 }
 
@@ -137,49 +139,252 @@ const rows = [
     [
         createData(
             "Monday",
+            "Basics of JS, HTML, CSS",
             "This week we covered....",
             [
                 "https://www.google.com ",
                 "https://www.bing.com",
                 "https://www.gooogle.com",
             ],
-            "Basics of JS, HTML, CSS",
-            "yes available",
+            "Placeholder link",
+            "github link here" 
+        ),
+        createData(
+            "Tuesday",
+            "Lorem Ipsum",
+            "This week we covered....",
+            [
+                "https://www.google.com ",
+                "https://www.bing.com",
+                "https://www.gooogle.com",
+            ],
+            "Placeholder link",
+            "github link here"
+        ),
+        createData(
+        "Wednesday",
+        "Lorem Ipsum",
+        "This week we covered....",
+        [
+            "https://www.google.com ",
+            "https://www.bing.com",
+            "https://www.gooogle.com",
+        ],
+        "Placeholder link",
+        "github link here"
+        ),
+        createData(
+        "Thursday",
+        "Lorem Ipsum",
+        "This week we covered....",
+        [
+            "https://www.google.com ",
+            "https://www.bing.com",
+            "https://www.gooogle.com",
+        ],
+        "Placeholder link",
+        "github link here"
+        ),
+        createData(
+        "Friday",
+        "Lorem Ipsum",
+        "This week we covered....",
+        [
+            "https://www.google.com ",
+            "https://www.bing.com",
+            "https://www.gooogle.com",
+        ],
+        "Placeholder link",
+        "github link here"
+        ),
+    ],
+    [
+        createData(
+            "Monday",
+            "Lorem Ipsum",
+            "This week we covered....",
+            [
+                "https://www.google.com ",
+                "https://www.bing.com",
+                "https://www.gooogle.com",
+            ],
+            "Placeholder link",
             "github link here"
         ),
         createData(
             "Tuesday",
-            "https://www.google.com",
-            "Basics of JS, HTML, CSS",
-            "yes available",
-            ""
+            "Lorem Ipsum",
+            "This week we covered....",
+            [
+                "https://www.google.com ",
+                "https://www.bing.com",
+                "https://www.gooogle.com",
+            ],
+            "Placeholder link",
+            "github link here"
         ),
-        createData("Wednesday", "", "", "", ""),
-        createData("Thursday", "", "", "", ""),
-        createData("Friday", "", "", "", ""),
+        createData(
+        "Wednesday",
+        "Lorem Ipsum",
+        "This week we covered....",
+        [
+            "https://www.google.com ",
+            "https://www.bing.com",
+            "https://www.gooogle.com",
+        ],
+        "Placeholder link",
+        "github link here"
+        ),
+        createData(
+        "Thursday",
+        "Lorem Ipsum",
+        "This week we covered....",
+        [
+            "https://www.google.com ",
+            "https://www.bing.com",
+            "https://www.gooogle.com",
+        ],
+        "Placeholder link",
+        "github link here"
+        ),
+        createData(
+        "Friday",
+        "Lorem Ipsum",
+        "This week we covered....",
+        [
+            "https://www.google.com ",
+            "https://www.bing.com",
+            "https://www.gooogle.com",
+        ],
+        "Placeholder link",
+        "github link here"
+        ),
+    ],
+
+    [
+        createData(
+            "Monday",
+            "Lorem Ipsum",
+            "This week we covered....",
+            [
+                "https://www.google.com ",
+                "https://www.bing.com",
+                "https://www.gooogle.com",
+            ],
+            "Placeholder link",
+            "github link here"
+        ),
+        createData(
+            "Tuesday",
+            "Loreum Ipsum",
+            "This week we covered....",
+            [
+                "https://www.google.com ",
+                "https://www.bing.com",
+                "https://www.gooogle.com",
+            ],
+            "Placeholder link",
+            "github link here"
+        ),
+        createData(
+        "Wednesday",
+        "Lorem Ipsum",
+        "This week we covered....",
+        [
+            "https://www.google.com ",
+            "https://www.bing.com",
+            "https://www.gooogle.com",
+        ],
+        "Placeholder link",
+        "github link here"
+        ),
+        createData(
+        "Thursday",
+        "Lorem Ipsum",
+        "This week we covered....",
+        [
+            "https://www.google.com ",
+            "https://www.bing.com",
+            "https://www.gooogle.com",
+        ],
+        "Placeholder link",
+        "github link here"
+        ),
+        createData(
+        "Friday",
+        "Lorem Ipsum",
+        "This week we covered....",
+        [
+            "https://www.google.com ",
+            "https://www.bing.com",
+            "https://www.gooogle.com",
+        ],
+        "Placeholder link",
+        "github link here"
+        ),
     ],
     [
-        createData("Monday", "Week 2", "yes availabe", ""),
-        createData("Tuesday", "react", "Not currently", ""),
-        createData("Wednesday", "", "", ""),
-        createData("Thursday", "", "", ""),
-        createData("Friday", "", "", ""),
-    ],
-    [
-        createData("Monday", "https://www.google.com/ ", "yes availabe", ""),
-        createData("Tuesday", "react", "Not currently", ""),
-        createData("Wednesday", "", "", ""),
-        createData("Thursday", "", "", ""),
-        createData("Friday", "", "", ""),
-    ],
-    [
-        createData("Monday", "React and Testing", "yes availabe", ""),
-        createData("Tuesday", "react", "Not currently", ""),
-        createData("Wednesday", "", "", ""),
-        createData("Thursday", "", "", ""),
-        createData("Friday", "", "", ""),
-    ],
-];
+        createData(
+            "Monday",
+            "Lorem Ipsum",
+            "This week we covered....",
+            [
+                "https://www.google.com ",
+                "https://www.bing.com",
+                "https://www.gooogle.com",
+            ],
+            "Placeholder link",
+            "github link here"
+        ),
+        createData(
+            "Tuesday",
+            "Lorem Ipsum",
+            "This week we covered....",
+            [
+                "https://www.google.com ",
+                "https://www.bing.com",
+                "https://www.gooogle.com",
+            ],
+            "Placeholder link",
+            "github link here"
+        ),
+        createData(
+        "Wednesday",
+        "Lorem Ipsum",
+        "This week we covered....",
+        [
+            "https://www.google.com ",
+            "https://www.bing.com",
+            "https://www.gooogle.com",
+        ],
+        "Placeholder link",
+        "github link here"
+        ),
+        createData(
+        "Thursday",
+        "Lorem ipsum",
+        "This week we covered....",
+        [
+            "https://www.google.com ",
+            "https://www.bing.com",
+            "https://www.gooogle.com",
+        ],
+        "Placeholder link",
+        "Lorem ipsum"
+        ),
+        createData(
+        "Friday",
+        "Lorem ipsum",
+        "This week we covered....",
+        [
+            "https://www.google.com ",
+            "https://www.bing.com",
+            "https://www.gooogle.com",
+        ],
+        "Placeholder link",
+        "Lorem ipsum"
+        ),
+    ]];
 
 //component which is exported into timeline component to render a table
 //consists of a table header which has metadata currently hardcoded

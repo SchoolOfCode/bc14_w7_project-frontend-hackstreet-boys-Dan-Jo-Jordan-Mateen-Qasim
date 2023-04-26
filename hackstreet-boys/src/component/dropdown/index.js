@@ -39,9 +39,9 @@ function Row(props) {
                 <TableCell component="th" scope="row">
                     {row.day}
                 </TableCell>
-                <TableCell align="right">{row.referenceMaterial}</TableCell>
+                <TableCell align="right">{row.topicsCovered}</TableCell>
                 <TableCell align="right">{row.description}</TableCell>
-                <TableCell align="right">{row.classroomLink}</TableCell>
+              
             </TableRow>
             <TableRow>
                 <TableCell
@@ -60,7 +60,7 @@ function Row(props) {
                             <Table size="small" aria-label="week data">
                                 <TableHead>
                                     <TableRow>
-                                        <TableCell>Links</TableCell>
+                                        <TableCell>External Resources</TableCell>
                                         <TableCell>
                                             Lecture Recordings
                                         </TableCell>
@@ -70,16 +70,16 @@ function Row(props) {
                                 <TableBody>
                                     <TableRow>
                                         <TableCell>
-                                            <a href={row.links[0]}>
-                                                {row.links[0]}
+                                            <a href={row.externalResources[0]}>
+                                                {row.externalResources[0]}
                                             </a>
                                             <br />
-                                            <a href={row.links[1]}>
-                                                {row.links[1]}
+                                            <a href={row.externalResources[1]}>
+                                                {row.externalResources[1]}
                                             </a>
                                             <br />
-                                            <a href={row.links[2]}>
-                                                {row.links[2]}
+                                            <a href={row.externalResources[2]}>
+                                                {row.externalResources[2]}
                                             </a>
                                         </TableCell>
                                         <TableCell>
@@ -117,18 +117,18 @@ Row.propTypes = {
 function createData(
     day,
     description,
-    links,
-    referenceMaterial,
+   externalResources,
     lectureRecording,
-    classroomLink
+    classroomLink,
+    topicsCovered 
 ) {
     return {
         day,
-        description,
-        links,
-        referenceMaterial,
-        lectureRecording,
-        classroomLink,
+    description,
+   externalResources,
+    lectureRecording,
+    classroomLink,
+    topicsCovered,
     };
 }
 

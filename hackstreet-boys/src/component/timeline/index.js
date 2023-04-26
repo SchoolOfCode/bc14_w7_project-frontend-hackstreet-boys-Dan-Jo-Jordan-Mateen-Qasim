@@ -18,6 +18,15 @@ export default function Timeline() {
 - We suspect that we may need another useState for week description and any other week
 identification, the same way they have, picking from an array.
 
+
+
+1. Make sure the table has data in it and is different to each other
+
+2. Make sure the table is visible and hides as we want
+
+3. As weeks
+
+
 */
 
   const totalSteps = () => {
@@ -91,7 +100,7 @@ identification, the same way they have, picking from an array.
         ) : (
           <React.Fragment>
             <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
-              Hello
+             <CollapsibleTable week = {activeStep} />
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
               <Button

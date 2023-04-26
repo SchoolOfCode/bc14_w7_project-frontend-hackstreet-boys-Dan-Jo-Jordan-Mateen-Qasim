@@ -93,21 +93,21 @@ Row.propTypes = {
 };
 
 const rows = [
-  createData('Monday', '', '', ''),
+  createData('Monday', 'JS', '', ''),
   createData('Tuesday', '', '', ''),
   createData('Wednesday', '', '', ''),
   createData('Thursday', '', '', ''),
   createData('Friday', '', '', ''),
 ];
 
-export default function CollapsibleTable() {
+export default function CollapsibleTable(props) {
   return (
     <TableContainer component={Paper}>
       <Table aria-label="collapsible table">
         <TableHead>
           <TableRow>
             <TableCell />
-            <TableCell>Week 1</TableCell>
+            <TableCell>Week {props.week +1}</TableCell>
             <TableCell align="right">Topics Covered</TableCell>
             <TableCell align="right">Brief Description</TableCell>
           </TableRow>

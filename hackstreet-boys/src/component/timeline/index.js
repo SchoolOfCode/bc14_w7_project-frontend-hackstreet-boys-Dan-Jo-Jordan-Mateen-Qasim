@@ -12,7 +12,12 @@ const steps = ["Week 1", "Week 2", "Week 3", "Week 4"];
 export default function Timeline() {
     const [activeStep, setActiveStep] = React.useState(0);
     const [completed, setCompleted] = React.useState({});
+    const [buttonClicked, setButtonClicked] = React.useState(false); // initialize state variable
 
+    function handleClick(buttonClicked) {
+        console.log("Hello");
+        setButtonClicked(!buttonClicked); // update state variable
+    }
     /*
 - The typography component is responsible for displaying text on each node
 - We suspect that we may need another useState for week description and any other week
@@ -59,8 +64,9 @@ identification, the same way they have, picking from an array.
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
 
-    const handleStep = (step) => () => {
+    const handleStep = (step, buttonClicked) => {
         setActiveStep(step);
+        setButtonClicked(!buttonClicked);
     };
 
     const handleComplete = () => {
@@ -80,7 +86,12 @@ identification, the same way they have, picking from an array.
             <Stepper nonLinear activeStep={activeStep}>
                 {steps.map((label, index) => (
                     <Step key={label} completed={completed[index]}>
-                        <StepButton color="inherit" onClick={handleStep(index)}>
+                        <StepButton
+                            color="inherit"
+                            onClick={() => {
+                                handleStep(index, buttonClicked);
+                            }}
+                        >
                             {label}
                         </StepButton>
                     </Step>
@@ -106,7 +117,11 @@ identification, the same way they have, picking from an array.
                 ) : (
                     <React.Fragment>
                         <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
-                            <CollapsibleTable week={activeStep} />
+                            {buttonClicked ? (
+                                <CollapsibleTable week={activeStep} />
+                            ) : (
+                                <p> </p>
+                            )}
                         </Typography>
                         <Box
                             sx={{

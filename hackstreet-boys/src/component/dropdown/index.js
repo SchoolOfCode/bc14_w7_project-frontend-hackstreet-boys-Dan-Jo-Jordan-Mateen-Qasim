@@ -137,63 +137,62 @@ const rows = [
     [
         createData(
             "Monday",
-            "Basics of JS, HTML, CSS",
-            "This week we covered....",
+            "Computational thinking",
+            "Introduce the Soft. Eng. mindset",
             [
-                "https://www.google.com ",
-                "https://www.bing.com",
-                "https://www.gooogle.com",
+                "https://online.york.ac.uk/what-is-computational-thinking/",
+                "https://ctpdonline.org/computational-thinking/",
             ],
-            "Placeholder link",
-            "github link here"
+            "https://www.youtube.com/embed/0Es2ixgp6vA",
+            "No links today"
         ),
         createData(
             "Tuesday",
-            "Lorem Ipsum",
-            "This week we covered....",
+            "Git",
+            "Introduction to git",
             [
-                "https://www.google.com ",
-                "https://www.bing.com",
-                "https://www.gooogle.com",
+                "https://www.w3schools.com/git/default.asp",
+                "https://training.github.com/downloads/github-git-cheat-sheet.pdf",
+                "https://www.freecodecamp.org/news/git-cheat-sheet/",
             ],
-            "https://www.youtube.com/embed/0Es2ixgp6vA",
-            "github link here"
+            "Placeholder2",
+            ["https://github.com/SchoolOfCode/bc14_w1d2_workshop_git-in-teams-room_36_mq_mh_", "https://github.com/SchoolOfCode/bc14_w1d3_workshop_js-102-room_36_mq_mh_"]
         ),
         createData(
             "Wednesday",
-            "Lorem Ipsum",
-            "This week we covered....",
+            "JavaScript",
+            "Basic JavaScript",
             [
-                "https://www.google.com ",
-                "https://www.bing.com",
-                "https://www.gooogle.com",
+                "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables",
+                "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions",
+                "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else",
             ],
-            "Placeholder link",
-            "github link here"
+            "Placeholder3",
+            ["https://github.com/SchoolOfCode/bc14_w1d3_workshop_js-101-room_36_mq_mh_", "https://github.com/SchoolOfCode/bc14_w1d3_workshop_js-102-room_36_mq_mh_" ]
         ),
         createData(
             "Thursday",
-            "Lorem Ipsum",
-            "This week we covered....",
+            "JavaScript",
+            "Objects in JavaScript",
             [
-                "https://www.google.com ",
-                "https://www.bing.com",
-                "https://www.gooogle.com",
+                "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects",
+                "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object-",
+                "https://www.w3schools.com/js/js_objects.asp",
             ],
-            "Placeholder link",
-            "github link here"
+            "Placeholder4",
+            "https://github.com/SchoolOfCode/bc14_w1d4_workshop_objects-room_36_mq_mh_"
         ),
         createData(
             "Friday",
-            "Lorem Ipsum",
-            "This week we covered....",
+            "JavaScript",
+            "Basic JS Hackathon!",
             [
                 "https://www.google.com ",
                 "https://www.bing.com",
-                "https://www.gooogle.com",
+                "https://www.w3schools.com/",
             ],
-            "Placeholder link",
-            "github link here"
+            "Placeholder5",
+            "https://github.com/SchoolOfCode/bc14_w1d5_hackathon_rps-room_36_mq_mh_"
         ),
     ],
     [
@@ -202,8 +201,8 @@ const rows = [
             "Lorem Ipsum",
             "This week we covered....",
             [
-                "https://www.google.com ",
-                "https://www.bing.com",
+                "https://www.google.com",
+                "https://developer.mozilla.org/en-US/",
                 "https://www.gooogle.com",
             ],
             "Placeholder link",

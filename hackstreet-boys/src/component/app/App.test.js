@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import App from './App';
 
 // test('renders learn react link', () => {
@@ -10,7 +10,7 @@ import App from './App';
 // Testing
 
   // Test 1: Does the page load
-  // Test 2: Does the page load with table state = false 
+  // Test 2: If enter button is clicked, does it take user to the next page  
   // Test 3: Does the table = true when clicking a week 'node'
   // Test 4: Does the RIGHT table appear when clicking a week
   // Test 5: Does the table contain the expected text for that week
@@ -20,3 +20,21 @@ import App from './App';
   const actual = screen.getByRole("heading", {name: "SoC Roadmap App"})
   expect(actual).toBeInTheDocument()
     })
+
+
+test('Does enter button take user to the next page', () => {
+render (<App />);
+fireEvent(
+  screen.getByText( "Enter"),
+  new MouseEvent('click', {
+   bubbles: true,
+   cancelable: true, 
+  })
+)
+
+const actual = screen.getByRole('img') 
+expect(actual.classList).toContain('MuiBox-root css-8atqhb')
+
+}
+)
+

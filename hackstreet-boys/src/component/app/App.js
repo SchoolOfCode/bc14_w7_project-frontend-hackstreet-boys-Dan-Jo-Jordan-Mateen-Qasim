@@ -26,7 +26,7 @@ function App() {
                 <div>
                     <img
                         src="https://i.dailymail.co.uk/i/pix/scaled/2013/08/03/article-2383977-0B66F6C300000578-81_310x187.jpg"
-                        alt="SoC logo"
+                        alt="Kitchener"
                     />
                     <button onClick={handleClick}>Enter</button>
                 </div>

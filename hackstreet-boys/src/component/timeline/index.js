@@ -126,7 +126,7 @@ identification, the same way they have, picking from an array. UPDATE 1.1:
                     </React.Fragment>
                 ) : (
                     <React.Fragment>
-                        <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
+                        <Typography sx={{ mt: 2, mb: 1, py: 1, color: "white", }}>
                             {buttonClicked ? (
                                 <CollapsibleTable week={activeStep} />
                             ) : (

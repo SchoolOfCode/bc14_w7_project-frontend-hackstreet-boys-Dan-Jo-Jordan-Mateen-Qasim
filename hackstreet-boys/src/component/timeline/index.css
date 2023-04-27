@@ -1,0 +1,78 @@
+.cd-h-timeline__events {
+    position: relative;
+}
+
+.cd-h-timeline__event {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    opacity: 0;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+}
+
+.cd-h-timeline__event--selected {
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.cd-h-timeline__event--enter-right,
+.cd-h-timeline__event--leave-right {
+    animation-name: cd-enter-right;
+}
+
+.cd-h-timeline__event--enter-left,
+.cd-h-timeline__event--leave-left {
+    animation-name: cd-enter-left;
+}
+
+.cd-h-timeline__event--leave-right,
+.cd-h-timeline__event--leave-left {
+    animation-direction: reverse;
+}
+
+@keyframes cd-enter-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes cd-enter-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.feedback-button {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.feedback-button:hover {
+    background-color: #ddd;
+}

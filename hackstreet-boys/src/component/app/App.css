@@ -1,38 +1,88 @@
-.App {
+h1 {
+text-align: left;
+color: white;
+font-size: 20px;
+font-style: bold;
+}
+
+h2 {
+  font-style: bold;
+  font-weight: 50px;
+  color: black;
+  font-size: 30px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+
+  font-style: bold;
+  font-weight: 50px;
+  color: white;
+  font-size: 30px;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3 {
+  font-style: italic;
+  font-weight: 35px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* body {
+  background-color: rgb(226, 226, 212);
+} */
+
+/* .background {
+  background-image: url(https://www.schoolofcode.co.uk/static/1b2a6e190d7200702c91eb743e985236/9000d/workshops.webp);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.white {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.black {
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App {
+  text-align: center;
+  background-image: url(https://www.schoolofcode.co.uk/static/1b2a6e190d7200702c91eb743e985236/9000d/workshops.webp);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(300px);
+  height: 100vh;
+  width: 100%;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
 }

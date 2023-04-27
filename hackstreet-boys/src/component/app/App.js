@@ -14,18 +14,18 @@ function App() {
 
     return (
         <div className="App">
-            <h1>The Hackstreet Boys Present...</h1>
-            <h2>SoC Roadmap App</h2>
-            <h3>'Your one-stop-shop for your weekly learning resources!'</h3>
+        <p></p>
+        {buttonClicked ? <p></p> : <h1>The Hackstreet Boys Present...</h1> }
+        <h2>The School of Code Roadmap App</h2>
+        {buttonClicked ? <p></p> : <img src="https://live-production.wcms.abc-cdn.net.au/6bb5d0d61c9fec548ee95ec9de049805?impolicy=wcms_crop_resize&cropH=599&cropW=1064&xPos=0&yPos=413&width=862&height=485" alt= "Lord Kitchener"/> }
+        <img src="https://d33wubrfki0l68.cloudfront.net/e6fddcbea146f91d2f3c160f7d56a9391a4740b0/4e758/static/logo-51c754388b198e5bbb0d08a971ebbfa2.png"
+            alt="SoC logo" />
             {buttonClicked ? ( // conditionally render the Timeline component or the button
                 <Timeline />
             ) : (
                 <div>
                     <div>
-                        <img
-                            src="https://d33wubrfki0l68.cloudfront.net/e6fddcbea146f91d2f3c160f7d56a9391a4740b0/4e758/static/logo-51c754388b198e5bbb0d08a971ebbfa2.png"
-                            alt="SoC logo"
-                        />
+                        <h3>'Your one-stop-shop for your weekly learning resources!'</h3>
                     </div>
                     <button onClick={handleClick}>Enter</button>
                 </div>

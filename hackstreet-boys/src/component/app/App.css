@@ -1,10 +1,24 @@
-h2 {
-  font-style: italic;
-  font-weight: 350;
+h1 {
+text-align: left;
+color: white;
+font-size: 20px;
+font-style: bold;
 }
 
-img {
-  margin-bottom: 3%;
+h2 {
+  font-style: bold;
+  font-weight: 50px;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+h3 {
+  font-style: italic;
+  font-weight: 35px;
+  color: white;
+  font-size: 20px;
+  text-align: left;
 }
 
 /* body {
@@ -20,11 +34,15 @@ img {
   width: 100%;
 } */
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
-  margin-bottom: 10%;
   background-image: url(https://www.schoolofcode.co.uk/static/1b2a6e190d7200702c91eb743e985236/9000d/workshops.webp);
-  background-position: bottom;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: blur(300px);
@@ -32,15 +50,16 @@ img {
   width: 100%;
 }
 
+img [src="https://live-production.wcms.abc-cdn.net.au/6bb5d0d61c9fec548ee95ec9de049805?impolicy=wcms_crop_resize&cropH=599&cropW=1064&xPos=0&yPos=413&width=862&height=485"] {
+  margin-bottom: 0%;
+  position: left;
+  width: 10px;
+  height: 10px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -56,13 +75,4 @@ img {
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

@@ -18,7 +18,7 @@ h3 {
   font-weight: 35px;
   color: white;
   font-size: 20px;
-  text-align: left;
+  text-align: center;
 }
 
 /* body {
@@ -48,13 +48,6 @@ body {
   backdrop-filter: blur(300px);
   height: 100vh;
   width: 100%;
-}
-
-img [src="https://live-production.wcms.abc-cdn.net.au/6bb5d0d61c9fec548ee95ec9de049805?impolicy=wcms_crop_resize&cropH=599&cropW=1064&xPos=0&yPos=413&width=862&height=485"] {
-  margin-bottom: 0%;
-  position: left;
-  width: 10px;
-  height: 10px;
 }
 
 .App-logo {

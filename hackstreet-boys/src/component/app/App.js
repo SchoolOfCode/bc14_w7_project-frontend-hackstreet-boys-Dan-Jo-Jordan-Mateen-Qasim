@@ -14,8 +14,9 @@ function App() {
 
     return (
         <div className="App">
-            <h1>SoC Roadmap App</h1>
-            <h2>'Your one-stop-shop for your weekly learning resources!'</h2>
+            <h1>The Hackstreet Boys Present...</h1>
+            <h2>SoC Roadmap App</h2>
+            <h3>'Your one-stop-shop for your weekly learning resources!'</h3>
             {buttonClicked ? ( // conditionally render the Timeline component or the button
                 <Timeline />
             ) : (

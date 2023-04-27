@@ -101,55 +101,12 @@ identification, the same way they have, picking from an array. UPDATE 1.1:
     }
 
     return (
-        <Box sx={{ width: "100%" }}>
-            <Stepper nonLinear activeStep={activeStep}>
-                {steps.map((label, index) => (
-                    <Step key={label} completed={completed[index]}>
-                        <StepButton
-                            color="inherit"
-                            onClick={() => {
-                                handleStep(index, buttonClicked);
-                            }}
-                        >
-                            {label}
-                        </StepButton>
-                    </Step>
-                ))}
-            </Stepper>
-            <div>
-                {allStepsCompleted() ? (
-                    <React.Fragment>
-                        <Typography sx={{ mt: 2, mb: 1 }}>
-                            All steps completed - you&apos;re finished
-                        </Typography>
-                        <Box
-                            sx={{
-                                display: "flex",
-                                flexDirection: "row",
-                                pt: 2,
-                            }}
-                        >
-                            <Box sx={{ flex: "1 1 auto" }} />
-                            <Button onClick={handleReset}>Reset</Button>
-                        </Box>
-                    </React.Fragment>
-                ) : (
-                    <React.Fragment>
-                        <Typography sx={{ mt: 2, mb: 1, py: 1, color: "white", }}>
-                            {buttonClicked ? (
-                                <CollapsibleTable week={activeStep} />
-                            ) : (
-                                <p> </p>
-                            )}
-                        </Typography>
-                        <Box
-                            sx={{
-                                display: "flex",
-                                flexDirection: "row",
-                                pt: 2,
-                            }}
-                        >
-                            <Button
+        <>
+            <Box sx={{ width: "100%" }}>
+                <Stepper nonLinear activeStep={activeStep}>
+                    {steps.map((label, index) => (
+                        <Step key={label} completed={completed[index]}>
+                            <StepButton
                                 color="inherit"
                                 onClick={() => {
                                     handleStep(index, buttonClicked);
@@ -179,7 +136,7 @@ identification, the same way they have, picking from an array. UPDATE 1.1:
                         </React.Fragment>
                     ) : (
                         <React.Fragment>
-                            <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
+                            <Typography sx={{ mt: 2, mb: 1, py: 1, color: "white" }}>
                                 {buttonClicked ? (
                                     <CollapsibleTable week={activeStep} />
                                 ) : (
@@ -205,23 +162,22 @@ identification, the same way they have, picking from an array. UPDATE 1.1:
                                 <Button onClick={handleNext} sx={{ mr: 1 }}>
                                     Next
                                 </Button>
-                                {activeStep !== steps.length &&
-                                    (completed[activeStep] ? (
+                                {activeStep !== steps.length && (
+                                    completed[activeStep] ? (
                                         <Typography
                                             variant="caption"
                                             sx={{ display: "inline-block" }}
                                         >
-                                            Week {activeStep + 1} already
-                                            completed
+                                            Week {activeStep + 1} already completed
                                         </Typography>
                                     ) : (
                                         <Button onClick={handleComplete}>
-                                            {completedSteps() ===
-                                            totalSteps() - 1
+                                            {completedSteps() === totalSteps() - 1
                                                 ? "Finish"
                                                 : "Complete Step"}
                                         </Button>
-                                    ))}
+                                    )
+                                )}
                             </Box>
                         </React.Fragment>
                     )}

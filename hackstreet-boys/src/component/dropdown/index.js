@@ -14,6 +14,7 @@ import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import Video from "../video";
 
 //React component called Row which is called inside the Table Compoenent below
 function Row(props) {
@@ -41,7 +42,6 @@ function Row(props) {
                 </TableCell>
                 <TableCell align="right">{row.topicsCovered}</TableCell>
                 <TableCell align="right">{row.description}</TableCell>
-              
             </TableRow>
             <TableRow>
                 <TableCell
@@ -60,7 +60,9 @@ function Row(props) {
                             <Table size="small" aria-label="week data">
                                 <TableHead>
                                     <TableRow>
-                                        <TableCell>External Resources</TableCell>
+                                        <TableCell>
+                                            External Resources
+                                        </TableCell>
                                         <TableCell>
                                             Lecture Recordings
                                         </TableCell>
@@ -83,9 +85,7 @@ function Row(props) {
                                             </a>
                                         </TableCell>
                                         <TableCell>
-                                            <a href={row.lectureRecording}>
-                                                {row.lectureRecording}
-                                            </a>
+                                            <Video src={row.lectureRecording} />
                                         </TableCell>
                                         <TableCell>
                                             <a href={row.classroomLink}>
@@ -118,19 +118,17 @@ function createData(
     day,
     topicsCovered,
     description,
-   externalResources,
+    externalResources,
     lectureRecording,
-    classroomLink,
-    
+    classroomLink
 ) {
     return {
-    day,
-    topicsCovered,
-    description,
-   externalResources,
-    lectureRecording,
-    classroomLink,
-    
+        day,
+        topicsCovered,
+        description,
+        externalResources,
+        lectureRecording,
+        classroomLink,
     };
 }
 
@@ -147,10 +145,22 @@ const rows = [
                 "https://www.gooogle.com",
             ],
             "Placeholder link",
-            "github link here" 
+            "github link here"
         ),
         createData(
             "Tuesday",
+            "Lorem Ipsum",
+            "This week we covered....",
+            [
+                "https://www.google.com ",
+                "https://www.bing.com",
+                "https://www.gooogle.com",
+            ],
+            "https://www.youtube.com/embed/0Es2ixgp6vA",
+            "github link here"
+        ),
+        createData(
+            "Wednesday",
             "Lorem Ipsum",
             "This week we covered....",
             [
@@ -162,40 +172,28 @@ const rows = [
             "github link here"
         ),
         createData(
-        "Wednesday",
-        "Lorem Ipsum",
-        "This week we covered....",
-        [
-            "https://www.google.com ",
-            "https://www.bing.com",
-            "https://www.gooogle.com",
-        ],
-        "Placeholder link",
-        "github link here"
+            "Thursday",
+            "Lorem Ipsum",
+            "This week we covered....",
+            [
+                "https://www.google.com ",
+                "https://www.bing.com",
+                "https://www.gooogle.com",
+            ],
+            "Placeholder link",
+            "github link here"
         ),
         createData(
-        "Thursday",
-        "Lorem Ipsum",
-        "This week we covered....",
-        [
-            "https://www.google.com ",
-            "https://www.bing.com",
-            "https://www.gooogle.com",
-        ],
-        "Placeholder link",
-        "github link here"
-        ),
-        createData(
-        "Friday",
-        "Lorem Ipsum",
-        "This week we covered....",
-        [
-            "https://www.google.com ",
-            "https://www.bing.com",
-            "https://www.gooogle.com",
-        ],
-        "Placeholder link",
-        "github link here"
+            "Friday",
+            "Lorem Ipsum",
+            "This week we covered....",
+            [
+                "https://www.google.com ",
+                "https://www.bing.com",
+                "https://www.gooogle.com",
+            ],
+            "Placeholder link",
+            "github link here"
         ),
     ],
     [
@@ -224,40 +222,40 @@ const rows = [
             "github link here"
         ),
         createData(
-        "Wednesday",
-        "Lorem Ipsum",
-        "This week we covered....",
-        [
-            "https://www.google.com ",
-            "https://www.bing.com",
-            "https://www.gooogle.com",
-        ],
-        "Placeholder link",
-        "github link here"
+            "Wednesday",
+            "Lorem Ipsum",
+            "This week we covered....",
+            [
+                "https://www.google.com ",
+                "https://www.bing.com",
+                "https://www.gooogle.com",
+            ],
+            "Placeholder link",
+            "github link here"
         ),
         createData(
-        "Thursday",
-        "Lorem Ipsum",
-        "This week we covered....",
-        [
-            "https://www.google.com ",
-            "https://www.bing.com",
-            "https://www.gooogle.com",
-        ],
-        "Placeholder link",
-        "github link here"
+            "Thursday",
+            "Lorem Ipsum",
+            "This week we covered....",
+            [
+                "https://www.google.com ",
+                "https://www.bing.com",
+                "https://www.gooogle.com",
+            ],
+            "Placeholder link",
+            "github link here"
         ),
         createData(
-        "Friday",
-        "Lorem Ipsum",
-        "This week we covered....",
-        [
-            "https://www.google.com ",
-            "https://www.bing.com",
-            "https://www.gooogle.com",
-        ],
-        "Placeholder link",
-        "github link here"
+            "Friday",
+            "Lorem Ipsum",
+            "This week we covered....",
+            [
+                "https://www.google.com ",
+                "https://www.bing.com",
+                "https://www.gooogle.com",
+            ],
+            "Placeholder link",
+            "github link here"
         ),
     ],
 
@@ -287,40 +285,40 @@ const rows = [
             "github link here"
         ),
         createData(
-        "Wednesday",
-        "Lorem Ipsum",
-        "This week we covered....",
-        [
-            "https://www.google.com ",
-            "https://www.bing.com",
-            "https://www.gooogle.com",
-        ],
-        "Placeholder link",
-        "github link here"
+            "Wednesday",
+            "Lorem Ipsum",
+            "This week we covered....",
+            [
+                "https://www.google.com ",
+                "https://www.bing.com",
+                "https://www.gooogle.com",
+            ],
+            "Placeholder link",
+            "github link here"
         ),
         createData(
-        "Thursday",
-        "Lorem Ipsum",
-        "This week we covered....",
-        [
-            "https://www.google.com ",
-            "https://www.bing.com",
-            "https://www.gooogle.com",
-        ],
-        "Placeholder link",
-        "github link here"
+            "Thursday",
+            "Lorem Ipsum",
+            "This week we covered....",
+            [
+                "https://www.google.com ",
+                "https://www.bing.com",
+                "https://www.gooogle.com",
+            ],
+            "Placeholder link",
+            "github link here"
         ),
         createData(
-        "Friday",
-        "Lorem Ipsum",
-        "This week we covered....",
-        [
-            "https://www.google.com ",
-            "https://www.bing.com",
-            "https://www.gooogle.com",
-        ],
-        "Placeholder link",
-        "github link here"
+            "Friday",
+            "Lorem Ipsum",
+            "This week we covered....",
+            [
+                "https://www.google.com ",
+                "https://www.bing.com",
+                "https://www.gooogle.com",
+            ],
+            "Placeholder link",
+            "github link here"
         ),
     ],
     [
@@ -349,42 +347,43 @@ const rows = [
             "github link here"
         ),
         createData(
-        "Wednesday",
-        "Lorem Ipsum",
-        "This week we covered....",
-        [
-            "https://www.google.com ",
-            "https://www.bing.com",
-            "https://www.gooogle.com",
-        ],
-        "Placeholder link",
-        "github link here"
+            "Wednesday",
+            "Lorem Ipsum",
+            "This week we covered....",
+            [
+                "https://www.google.com ",
+                "https://www.bing.com",
+                "https://www.gooogle.com",
+            ],
+            "Placeholder link",
+            "github link here"
         ),
         createData(
-        "Thursday",
-        "Lorem ipsum",
-        "This week we covered....",
-        [
-            "https://www.google.com ",
-            "https://www.bing.com",
-            "https://www.gooogle.com",
-        ],
-        "Placeholder link",
-        "Lorem ipsum"
+            "Thursday",
+            "Lorem ipsum",
+            "This week we covered....",
+            [
+                "https://www.google.com ",
+                "https://www.bing.com",
+                "https://www.gooogle.com",
+            ],
+            "Placeholder link",
+            "Lorem ipsum"
         ),
         createData(
-        "Friday",
-        "Lorem ipsum",
-        "This week we covered....",
-        [
-            "https://www.google.com ",
-            "https://www.bing.com",
-            "https://www.gooogle.com",
-        ],
-        "Placeholder link",
-        "Lorem ipsum"
+            "Friday",
+            "Lorem ipsum",
+            "This week we covered....",
+            [
+                "https://www.google.com ",
+                "https://www.bing.com",
+                "https://www.gooogle.com",
+            ],
+            "Placeholder link",
+            "Lorem ipsum"
         ),
-    ]];
+    ],
+];
 
 //component which is exported into timeline component to render a table
 //consists of a table header which has metadata currently hardcoded

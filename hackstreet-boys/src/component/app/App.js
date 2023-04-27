@@ -23,7 +23,6 @@ function App() {
                 <Timeline />
             ) : (
                 <div>
-
                     <div>
                         <h3>'Your one-stop-shop for your weekly learning resources!'</h3>
                     </div>

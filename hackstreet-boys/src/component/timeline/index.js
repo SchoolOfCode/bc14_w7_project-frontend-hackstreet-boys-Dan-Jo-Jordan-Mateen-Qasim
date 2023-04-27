@@ -6,6 +6,9 @@ import StepButton from "@mui/material/StepButton";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import CollapsibleTable from "../dropdown";
+import FeedbackForm from "../feedback";
+
+
 
 // An array which feeds into a function which creates a node for each week you can click on in the live app
 const steps = ["Week 1", "Week 2", "Week 3", "Week 4"];
@@ -91,6 +94,12 @@ identification, the same way they have, picking from an array. UPDATE 1.1:
         setCompleted({});
     };
 
+    const [feedbackClicked, setFeedbackClicked] = React.useState(false); // initialize state variable
+
+    function handleFeedback() {
+        setFeedbackClicked(!feedbackClicked); // update state variable
+    }
+
     return (
         <Box sx={{ width: "100%" }}>
             <Stepper nonLinear activeStep={activeStep}>
@@ -142,35 +151,90 @@ identification, the same way they have, picking from an array. UPDATE 1.1:
                         >
                             <Button
                                 color="inherit"
-                                disabled={activeStep === 0}
-                                onClick={handleBack}
-                                sx={{ mr: 1 }}
+                                onClick={() => {
+                                    handleStep(index, buttonClicked);
+                                }}
                             >
-                                Back
-                            </Button>
-                            <Box sx={{ flex: "1 1 auto" }} />
-                            <Button onClick={handleNext} sx={{ mr: 1 }}>
-                                Next
-                            </Button>
-                            {activeStep !== steps.length &&
-                                (completed[activeStep] ? (
-                                    <Typography
-                                        variant="caption"
-                                        sx={{ display: "inline-block" }}
-                                    >
-                                        Week {activeStep + 1} already completed
-                                    </Typography>
+                                {label}
+                            </StepButton>
+                        </Step>
+                    ))}
+                </Stepper>
+                <div>
+                    {allStepsCompleted() ? (
+                        <React.Fragment>
+                            <Typography sx={{ mt: 2, mb: 1 }}>
+                                All steps completed - you&apos;re finished
+                            </Typography>
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    flexDirection: "row",
+                                    pt: 2,
+                                }}
+                            >
+                                <Box sx={{ flex: "1 1 auto" }} />
+                                <Button onClick={handleReset}>Reset</Button>
+                            </Box>
+                        </React.Fragment>
+                    ) : (
+                        <React.Fragment>
+                            <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
+                                {buttonClicked ? (
+                                    <CollapsibleTable week={activeStep} />
                                 ) : (
-                                    <Button onClick={handleComplete}>
-                                        {completedSteps() === totalSteps() - 1
-                                            ? "Finish"
-                                            : "Complete Step"}
-                                    </Button>
-                                ))}
-                        </Box>
-                    </React.Fragment>
+                                    <p> </p>
+                                )}
+                            </Typography>
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    flexDirection: "row",
+                                    pt: 2,
+                                }}
+                            >
+                                <Button
+                                    color="inherit"
+                                    disabled={activeStep === 0}
+                                    onClick={handleBack}
+                                    sx={{ mr: 1 }}
+                                >
+                                    Back
+                                </Button>
+                                <Box sx={{ flex: "1 1 auto" }} />
+                                <Button onClick={handleNext} sx={{ mr: 1 }}>
+                                    Next
+                                </Button>
+                                {activeStep !== steps.length &&
+                                    (completed[activeStep] ? (
+                                        <Typography
+                                            variant="caption"
+                                            sx={{ display: "inline-block" }}
+                                        >
+                                            Week {activeStep + 1} already
+                                            completed
+                                        </Typography>
+                                    ) : (
+                                        <Button onClick={handleComplete}>
+                                            {completedSteps() ===
+                                            totalSteps() - 1
+                                                ? "Finish"
+                                                : "Complete Step"}
+                                        </Button>
+                                    ))}
+                            </Box>
+                        </React.Fragment>
+                    )}
+                </div>
+            </Box>
+            <div>
+                <Button onClick={handleFeedback}>FEEDBACK</Button>
+                {feedbackClicked ? (
+                    <FeedbackForm handleFeedback={handleFeedback} />
+                ) : (
+                    <p></p>
                 )}
             </div>
-        </Box>
+        </>
     );
 }

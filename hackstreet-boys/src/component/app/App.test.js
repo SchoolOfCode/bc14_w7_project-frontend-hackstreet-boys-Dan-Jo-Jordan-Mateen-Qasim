@@ -17,9 +17,9 @@ import App from './App';
 
   test('Does the page load', () => {
   render (<App />);
-  const actual = screen.getByRole("heading", {name: "SoC Roadmap App"})
+  const actual = screen.getByRole("heading", {name: "The School of Code Roadmap App"})
   expect(actual).toBeInTheDocument()
-    })
+})
 
 
 test('Does enter button take user to the next page', () => {
@@ -32,8 +32,8 @@ fireEvent(
   })
 )
 
-const actual = screen.getByRole('img') 
-expect(actual.classList).toContain('MuiBox-root css-8atqhb')
+const actual = screen.getByRole('button',  {name: 'Week 1'}) 
+expect(actual).toBeInTheDocument()
 
 }
 )
